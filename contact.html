@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinapicso Photography – Contact / Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="logo">Dinapicso <span>Photography</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="active">Contact / Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact & Booking Request</h2>
+        <p class="section-intro">
+            This form is a prototype to show how clients will request sessions and ask questions. 
+            In a future implementation, form submissions would be connected to email or a booking system.
+        </p>
+
+        <form>
+            <div class="form-row">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your name">
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="you@example.com">
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Phone Number (optional)</label>
+                <input type="tel" id="phone" placeholder="(555) 555-5555">
+            </div>
+
+            <div class="form-row">
+                <label for="service">Type of Session</label>
+                <select id="service">
+                    <option value="">Please select</option>
+                    <option value="family">Family Session</option>
+                    <option value="kids">Kids / Seniors</option>
+                    <option value="sports">Sports / Teams / Band</option>
+                    <option value="military">Military Family Session</option>
+                    <option value="other">Other / Not sure</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Message / Details</label>
+                <textarea id="message" placeholder="Tell us about the session you have in mind."></textarea>
+            </div>
+
+            <button type="submit">Submit (Prototype Only)</button>
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2026 Dinapicso Photography. Prototype site for IT299 project.
+    </footer>
+</div>
+</body>
+</html>
