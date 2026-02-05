@@ -15,6 +15,21 @@ body {
 }
 
 /* ============================
+   Global Link Styling (Fixes purple links)
+============================ */
+a {
+    color: #66d9ff; /* bright readable link */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: #00ffd5; /* brighter on hover */
+    text-decoration: none;
+}
+
+/* ============================
    Wrapper Layout
 ============================ */
 .wrapper {
@@ -57,7 +72,7 @@ header {
 }
 
 /* ============================
-   Navigation
+   Navigation (keeps nav links normal)
 ============================ */
 nav ul {
     list-style: none;
@@ -66,7 +81,7 @@ nav ul {
 }
 
 nav a {
-    text-decoration: none;
+    text-decoration: none; /* nav links should NOT be underlined */
     color: #cfd7e4;
     font-size: 14px;
     padding: 6px 12px;
@@ -84,6 +99,70 @@ nav a.active {
     color: #041018;
     font-weight: 600;
     box-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
+}
+
+/* ============================
+   Hero Section + Buttons (Home page)
+============================ */
+.hero {
+    padding: 28px 0 10px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero p {
+    font-size: 15px;
+    color: #b8c3d6;
+    max-width: 900px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.hero-highlight {
+    color: #00ffd5;
+    font-weight: 600;
+}
+
+.btn-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0ab3ff, #00ffd5);
+    color: #041018;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 14px rgba(0, 200, 255, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(0, 255, 213, 0.35);
+    opacity: 0.98;
+}
+
+.btn.btn-outline {
+    background: transparent;
+    color: #e6ecf3;
+    border: 1px solid rgba(102, 217, 255, 0.6);
+    box-shadow: none;
+}
+
+.btn.btn-outline:hover {
+    background: rgba(102, 217, 255, 0.12);
+    border-color: rgba(0, 255, 213, 0.55);
 }
 
 /* ============================
@@ -108,6 +187,150 @@ main h3 {
     margin-bottom: 12px;
     color: #ffffff;
     font-size: 18px;
+}
+
+/* ============================
+   Cards / Grids (for Home / Services / Pricing)
+============================ */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.card {
+    background: linear-gradient(180deg, #0c162b, #070d1c);
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #cfd7e4;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Make links inside cards pop more */
+.card a {
+    color: #66d9ff;
+    font-weight: 600;
+}
+
+.card a:hover {
+    color: #00ffd5;
+}
+
+/* ============================
+   Banner Image (About / Services)
+============================ */
+.banner-img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin: 10px 0 18px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ============================
+   Simple List
+============================ */
+.simple-list {
+    padding-left: 18px;
+    line-height: 1.8;
+    color: #cfd7e4;
+    font-size: 14px;
+}
+
+/* ============================
+   FAQ
+============================ */
+.faq-item {
+    background: linear-gradient(180deg, #0c162b, #070d1c);
+    border-radius: 14px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    margin-bottom: 14px;
+}
+
+.faq-item h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.faq-item p {
+    color: #cfd7e4;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ============================
+   Forms (Contact)
+============================ */
+form {
+    margin-top: 10px;
+    max-width: 720px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+label {
+    font-size: 13px;
+    color: #b8c3d6;
+}
+
+input,
+select,
+textarea {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    padding: 10px 12px;
+    color: #e6ecf3;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: rgba(0, 255, 213, 0.45);
+    box-shadow: 0 0 0 3px rgba(0, 255, 213, 0.12);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0ab3ff, #00ffd5);
+    color: #041018;
+    font-weight: 800;
+    box-shadow: 0 0 14px rgba(0, 200, 255, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(0, 255, 213, 0.35);
+    opacity: 0.98;
 }
 
 /* ============================
@@ -181,5 +404,9 @@ footer {
 
     .logo {
         font-size: 30px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
     }
 }
